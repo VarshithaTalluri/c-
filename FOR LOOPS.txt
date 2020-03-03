@@ -1,0 +1,98 @@
+// WAP to accept n values and  sum of even numbers and sum of odd numbers
+
+void main()
+{
+	int n=0,esum=0,osum=0,i=0,num=0;
+	printf("Enter n value");
+	scanf("%d",&n);
+	printf("Enter %d values",n);
+     for(i=1;i<=n;i++)
+     {
+     	scanf("%d",&num);
+     	if(num%2==0)
+     	{
+     		esum=esum+num;
+		 }
+		 else
+		 {
+		 	osum=osum+num;
+		 }
+	 }
+	 printf("Sum of even numbers :%d \n",esum);
+	 printf("Sum of odd numbers :%d \n",osum);	
+}
+==============================================
+// WAP to accept n values and  sum of even numbers and sum of odd numbers
+
+void main()
+{
+	int n=0,ecount=0,ocount=0,i=0,num=0;
+	printf("Enter n value");
+	scanf("%d",&n);
+	printf("Enter %d values",n);
+     for(i=1;i<=n;i++)
+     {
+     	scanf("%d",&num);
+     	if(num%2==0)
+     	{
+     		ecount++;
+		 }
+		 else
+		 {
+		 	ocount++;
+		 }
+	 }
+	 printf("number of even numbers :%d \n",ecount);
+	 printf("number of odd numbers :%d \n",ocount);	
+}
+===============================================================
+WAP to find avg of given numbers
+void main()
+{
+	int n=0,i=0,num=0,sum=0;
+	float avg=0;
+	printf("Enter n value");
+	scanf("%d",&n);
+	printf("Enter %d values",n);
+     for(i=1;i<=n;i++)
+     {
+     	scanf("%d",&num);
+        sum=sum+num;
+     
+	 }
+	 avg=sum/n;
+	 printf("average value: %f ",avg);
+	
+}
+===============================================================
+
+WAP to accept n values and find avg value of even elemnets and 
+avg value of odd elements
+void main()
+{
+	int n=0,i=0,num=0,esum=0,osum=0,ecount=0,ocount=0;
+	float eavg=0,oavg=0;
+	printf("Enter n value");
+	scanf("%d",&n);
+	printf("Enter %d values",n);
+     for(i=1;i<=n;i++)
+     {
+     	scanf("%d",&num);
+        if(num%2==0)
+        {
+        	esum=esum+num;
+              ecount++;
+		}
+		else 
+		{
+			osum=osum+num;
+			ocount++;
+		}
+     
+	 }
+	 eavg=esum/ecount;
+	 oavg=osum/ocount;
+	 
+	 printf("average value of even elements: %f ",eavg);
+	 printf("average value of odd elements: %f ",oavg);	
+}
