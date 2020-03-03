@@ -1,0 +1,235 @@
+// WAP to print frequency of search element.
+void main()
+{
+     int marks[100],fr=0;
+     int i=0,n=0,search=0;
+     printf("Enter n value");
+     scanf("%d",&n);
+     printf("Enter %d values",n);
+     for(i=0;i<n;i++)
+     {
+     	scanf("%d",&marks[i]);   
+   	 }
+   	 printf("Enter search element");
+   	 scanf("%d",&search);
+	 
+	 for(i=0;i<n;i++)
+	 {
+	   if(search==marks[i])
+	   {
+	   	fr++;
+	   }
+   	 }
+		printf("%d frequency is %d ",search,fr);   
+}
+=====================================================================
+void main()
+{
+     int marks[100],fr=1,i=0,n=0,j=0;
+     printf("Enter n value");
+     scanf("%d",&n);
+     printf("Enter %d values",n);
+     for(i=0;i<n;i++)
+     {
+     	scanf("%d",&marks[i]);    //41 52 63 52 41 41 52 78   
+   	 }
+   	 for(i=0;i<n;i++)
+   	 {
+   	 	for(j=i+1;j<n;j++)
+   	 	{
+			
+	   	  if(marks[i]==marks[j])
+			 {
+			 	fr++;
+			 	marks[j]=0;
+			  } 
+			
+          }
+          if(marks[i]!=0)
+          {
+		  
+          printf("%d : %d \n",marks[i],fr);
+	}
+			fr=1;
+ }
+	   
+}
+
+=======================================
+WAP to find duplicate elementes in array
+void main()
+{
+     int marks[100],fr=1,i=0,n=0,j=0;
+     printf("Enter n value");
+     scanf("%d",&n);
+     printf("Enter %d values",n);
+     for(i=0;i<n;i++)
+     {
+     	scanf("%d",&marks[i]);    //41 52 63 52 41 41 52 78   
+   	 }
+   	 for(i=0;i<n;i++)
+   	 {
+   	 	for(j=i+1;j<n;j++)
+   	 	{
+			
+	   	  if(marks[i]==marks[j])
+			 {
+			 	fr++;
+			 	marks[j]=0;
+			  } 
+			
+          }
+          if(marks[i]!=0 && fr>1)
+          {
+		  
+          printf("%d : %d \n",marks[i],fr);
+	}
+			fr=1;
+ }
+	   
+}
+=======================================================
+WAP to find unique elementes in array
+void main()
+{
+     int marks[100],fr=1,i=0,n=0,j=0;
+     printf("Enter n value");
+     scanf("%d",&n);
+     printf("Enter %d values",n);
+     for(i=0;i<n;i++)
+     {
+     	scanf("%d",&marks[i]);    //41 52 63 52 41 41 52 78   
+   	 }
+   	 for(i=0;i<n;i++)
+   	 {
+   	 	for(j=i+1;j<n;j++)
+   	 	{
+			
+	   	  if(marks[i]==marks[j])
+			 {
+			 	fr++;
+			 	marks[j]=0;
+			  } 
+			
+          }
+          if(marks[i]!=0 && fr==1)
+          {
+		  
+          printf("%d : %d \n",marks[i],fr);
+	}
+			fr=1;
+ }
+	   
+}
+========================================================================
+ WAP to print in ascending order
+void main()
+{
+     int marks[100],i=0,n=0,j=0,temp=0;
+     printf("Enter n value");
+     scanf("%d",&n);
+     printf("Enter %d values",n);
+     for(i=0;i<n;i++)
+     {
+     	scanf("%d",&marks[i]);    //41 52 63 52 41 41 52 78   
+   	 }
+   	 for(i=0;i<n;i++)
+   	 {
+   	 	for(j=i+1;j<n;j++)
+   	 	{
+			
+	   	  if(marks[i]<marks[j])
+			 {
+			 	temp=marks[i];
+			 	marks[i]=marks[j];
+			 	marks[j]=temp;
+			  } 
+			
+          }
+         }
+         for(i=0;i<n;i++)
+         {
+         	printf("%d\t",marks[i]);
+		 }
+	   
+}
+==================================================================================
+WAP to split one array into two arrays
+void main()
+{
+	int values[100],n=0,i=0,even[100],odd[100],x=0,y=0;
+	printf("Enter n value");
+	scanf("%d",&n);
+	printf("Enter %d values",n);
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&values[i]);  //74 85 96 14 25 36 25 75
+ 
+	    if(values[i]%2==0)
+	    {
+	    	even[x]=values[i];
+	    	x++;
+		}
+		else
+		{
+			odd[y]=values[i];
+			y++;
+		}
+   }
+   printf("Even Array values: \n");
+   for(i=0;i<x;i++)
+   {
+   	printf("%d \t",even[i]);
+   }
+      printf("\nOdd Array values: \n");
+   for(i=0;i<y;i++)
+   {
+   	printf("%d \t",odd[i]);
+   }
+   
+}
+===============================================================================
+delete an element in an array if exsits
+void main()
+{
+	int values[100],n=0,i=0,search=0,pos=-1;
+	printf("Enter n value");             //  search  pos
+		scanf("%d",&n);
+		printf("Enter %d values",n);
+		for(i=0;i<n;i++)
+		{
+			scanf("%d",&values[i]);
+		}
+		printf("Enter search value");  // [74 85 96 25 14 36 ]
+		scanf("%d",&search);
+		for(i=0;i<n;i++)
+		{
+			 if(search==values[i])      // 85 
+			 {
+			 	  pos=i; 
+			 }
+	  }
+        
+        if(pos!=-1)
+        {
+		
+        for(i=pos;i<n;i++)
+        {
+        	values[i]=values[i+1];
+		}
+		for(i=0;i<n-1;i++)
+		{
+			printf("%d \t",values[i]);
+		}
+	   }
+	   else
+	   {
+	   	
+		for(i=0;i<n;i++)
+		{
+			printf("%d \t",values[i]);
+		}
+
+       }
+}
+=====================================================================================
