@@ -1,0 +1,352 @@
+// wap week number and print week day
+void main()
+{
+	int week_num=0;
+	printf("Enter week number");
+	scanf("%d",&week_num);
+	if(week_num==1)
+	{
+		printf("Sunday");
+	}
+	else if(week_num==2)
+	{
+		printf("monday");
+	 }
+	else if(week_num==3)
+	{
+		printf("Tuesday");
+	}
+	else if(week_num==7)
+	{
+		printf("saturday");
+	}
+	else
+	{
+		printf("invalid week number");
+	}
+}
+===================================================================
+WAP to check given number is even or odd
+
+void main()
+{
+	int num=0;
+	printf("Enter number to check even or odd");
+	scanf("%d",&num);
+	if(num%2==0)
+	{
+		printf("%d is even number",num);
+	}
+	else
+	{
+		printf("%d is odd number",num);
+	}
+	
+}
+=============================================================
+
+WAP to accept basic and find gross salary
+
+if basic<=10000  hra is 80% and da is 20%
+basic 10000-20000  hra is 85% and da is 30%
+basic >20000   hra is 90% and da is 40%
+
+void main()
+{
+	float bs=0,hra=0,da=0,gs=0;
+	printf("Enter basic salary");
+	scanf("%f",&bs);
+	if(bs<=10000)
+	{
+		hra=(bs/100)*80;
+		da=(bs/100)*20;
+	}
+	else if(bs<=20000)
+	{
+		hra=(bs/100)*85;
+		da=(bs/100)*25;
+	}
+	else
+	{
+	hra=(bs/100)*90;
+		da=(bs/100)*30;	
+	}
+	gs=bs+hra+da;
+	printf("Gross salary: %f \n",gs);
+	
+}
+==========================================================
+WAP to accept two numbers and print big number
+void main()
+{
+  int num1=0,num2=0;
+  printf("Enter num1 and num2 values");
+  scanf("%d%d",&num1,&num2);
+  if(num1>num2)
+  {
+  	printf("%d is big",num1);
+  }	
+  else if(num2>num1)
+  {
+  	printf("%d is big",num2);
+  	
+  }
+  else
+  {
+  	printf("Num1 and num2 are same");
+  }
+}
+=====================================================
+
+2000  500  100
+
+
+4800
+
+
+void main()
+{
+  int amt=0,a=0,b=0,c=0;
+  printf("Enter withdraw amount");
+  scanf("%d",&amt);
+  if(amt%100==0)   // 7800
+  {
+  	   if(amt>=2000)
+  	   {
+  	   	 a=amt/2000;
+  	   	 amt=amt-(a*2000);
+  	   	 printf("2000 rupees notes are: %d \n",a);
+	   }
+	   if(amt>=500)
+	   {
+	   	b=amt/500;
+	   	amt=amt-(b*500);
+	   	printf("500 rupees notes are: %d \n",b);
+	   }
+	   if(amt>=100)
+	   {
+	   	c=amt/100;
+	   	printf("100 rupees notes are: %d \n",c);
+	   }
+  }
+  else
+  {
+  	printf("invalid amount");
+  }
+}
+=====================================================================================
+WAP to accept project marks,internal,external marks from student and 
+genereate certificate with grade.
+
+70% project
+20% external
+10% internal
+
+85%   outstanding
+75--85  excellent
+70--75   Good
+60-70   average 
+50-60  poor 
+
+void main()
+{
+   int project=0,external=0,internal=0;
+   float total=0;
+   printf("Enter project, external and interanl marks");
+   scanf("%d%d%d",&project,&external,&internal);
+   if(project>=50 && external>=50 && internal>=50)
+   {
+   	total=(project*70)/100+(external*20)/100+(internal*10)/100;
+   	printf("Total marks: %f \n",total);
+   	if(total>=85)
+   	{
+   		printf("Outstanding");
+	   }
+	   else if(total>=75)
+	   {
+	   	printf("Excellent");
+	   }
+	   else if(total>=70)
+	   {
+	   	printf("Good");
+	   }
+	   else if(total>=60)
+	   {
+	   	printf("Average");
+	   }
+	   else 
+	   {
+	   	printf("Poor");
+	   }
+   	  
+   }
+   else 
+   {
+   	  if(project<50)
+   	  {
+   	  	printf("student got fail in project and score is : %d\n ",project);		 }
+   	 	 }
+   	 	 if(internal<50)
+   	  {
+   	  	printf("student got fail in internal and score is : %d \n",internal);		 }
+   	  
+		 
+	if(external<50)
+   	  {
+   	  	printf("student got fail in external and score is : %d \n",external);
+			 		 }
+   	  
+		 
+		 
+    
+}
+============================================================================================================
+// wap to print factors of a given number 
+void main()
+{
+	int i=0,num=0,fc=0;
+	printf("Enter num value");
+	scanf("%d",&num);  // 50
+	for(i=1;i<=num/2;i++)
+	{
+	    if(num%i==0)
+		{
+			fc++;
+			printf("%d \t",i);
+	    }
+	}  
+	printf("\nnumber of factors: %d \n ",fc);
+	
+
+}
+
+==============================================================
+// wap to find prime number or not of a given number 
+void main()
+{
+	int i=0,num=0,fc=0;
+	printf("Enter num value");
+	scanf("%d",&num);  // 50
+	for(i=1;i<=num/2;i++)
+	{
+	    if(num%i==0)
+		{
+			fc++;
+	    }
+	} 
+	if(fc==1)
+	{
+		printf("\n%d is prime number",num);
+	 } 
+	 else
+	 {
+	 	printf("\n%d is not a prime number",num);
+	 }
+	
+
+}
+
+=========================================================
+
+// wap to print factors of a given number 
+void main()
+{
+	int i=0,num=0,fs=0;
+	printf("Enter num value");
+	scanf("%d",&num);  // 50
+	for(i=1;i<=num/2;i++)
+	{
+	    if(num%i==0)
+		{
+			fs=fs+i;
+			printf("%d \t",i);
+	    }
+	} 
+	printf("\nsum of factors: %d ",fs);
+	
+	
+
+}
+
+================================================
+// wap to find perfect number or not of a given number 
+void main()
+{
+	int i=0,num=0,fs=0;
+	printf("Enter num value");
+	scanf("%d",&num);  // 50
+	for(i=1;i<=num/2;i++)
+	{
+	    if(num%i==0)
+		{
+			fs=fs+i;
+			printf("%d \t",i);
+	    }
+	} 
+	if(fs==num)
+	{
+		printf("%d is perfect number",num);
+	}
+	else
+	{
+		printf("%d is not a perfect number",num);
+	}
+	
+
+}
+
+==========================================================
+WAP to accept start and stop values and  print between values
+void main()
+{
+  
+  int start=0,stop=0,i=0;
+  printf("enter start and stop values");
+  scanf("%d%d",&start,&stop);
+  
+  if(start<stop )
+  {
+  	for(i=start+1;i<stop;i++)
+  	{
+  		printf("%d \t",i);
+	  }
+  }
+  else if(start>stop) 
+    {
+  	for(i=start-1;i>=stop-1;i--)
+  	{
+  		printf("%d \t",i);
+	  }
+  }
+  else
+  {
+  	printf("start and stop values are same");
+  }
+  
+}
+========================================================================================
+WAP to accept n values and find max value.
+Enter n value: 5
+
+74  85  24 63 15
+
+void main()
+{
+int n=0,i=0,num=0,max=0;
+printf("Enter n value");
+scanf("%d",&n); //5   
+printf("Enter %d values",n);
+for(i=1;i<=n;i++)    // 74 85 96 12 43 
+{
+	scanf("%d",&num);
+	if(max<num)
+	{
+		max=num;   // 96
+	}
+}
+printf("max : %d",max);
+
+	
+	
+	
+}
